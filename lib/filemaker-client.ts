@@ -25,8 +25,8 @@ interface AuthResult {
 }
 
 export class FileMakerClient {
-  private config: FileMakerConfig
-  private axiosInstance: AxiosInstance
+  private config!: FileMakerConfig
+  private axiosInstance!: AxiosInstance
   private token: string | null = null
   private lastActivity: number = Date.now()
   private readonly SESSION_TIMEOUT = 10 * 60 * 1000 // 10 minutes in milliseconds
