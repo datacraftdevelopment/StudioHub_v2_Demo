@@ -37,6 +37,8 @@ export class FileMakerClient {
     if (isDemoMode) {
       return new MockFileMakerClient(existingToken) as any
     }
+    
+    // Initialize config for production mode
     this.config = {
       host: process.env.STUDIOHUB_HOST!,
       database: process.env.STUDIOHUB_DATABASE || 'StudioHub',
