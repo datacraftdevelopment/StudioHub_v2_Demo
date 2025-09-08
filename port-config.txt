@@ -1,0 +1,10 @@
+# StudioHub Dashboard Port Configuration
+# 
+# If port 3000 is not available, you can change it here:
+# Uncomment the line below and set your desired port
+# 
+# HOST_PORT=3001
+# 
+# Then run: ./deploy.sh
+# 
+# The deployment script will automatically use this port.

@@ -1,0 +1,42 @@
+
+> studiohub-dashboard@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.30
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 5.2s
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 1218ms (72 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 6.9s (471 modules)
+ GET / 307 in 7185ms
+ ✓ Compiled in 319ms (236 modules)
+ GET / 307 in 60ms
+ ○ Compiling /login ...
+ ✓ Compiled /login in 1975ms (460 modules)
+ GET /login 200 in 2400ms
+ GET /login 200 in 25ms
+ GET /login 200 in 85ms
+ ○ Compiling /api/auth/login ...
+ ✓ Compiled /api/auth/login in 1990ms (399 modules)
+(node:44498) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ POST /api/auth/login 401 in 2933ms
+ ✓ Compiled in 1272ms (466 modules)
+ ✓ Compiled in 441ms (242 modules)
+ ✓ Compiled in 531ms (242 modules)
+ ✓ Compiled in 422ms (242 modules)
+ ✓ Compiled in 406ms (242 modules)
+ ✓ Compiled in 397ms (242 modules)
+ ✓ Compiled in 399ms (242 modules)
+ ✓ Compiled in 447ms (242 modules)
+ ✓ Compiled in 391ms (242 modules)
+ ✓ Compiled in 465ms (242 modules)
+ ✓ Compiled in 393ms (242 modules)
+ ✓ Compiled in 635ms (242 modules)
+ ✓ Compiled / in 211ms (232 modules)
+ GET / 307 in 407ms
+[?25h

@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "supabase-memory": {
+      "command": "node",
+      "args": ["/Users/dasilvaja/supabase-mcp-memory/server.js"],
+      "env": {
+        "SUPABASE_URL": "https://utbonjisfrbyvlmvclvs.supabase.co",
+        "SUPABASE_SERVICE_KEY": "sb_secret_r9n8-s17H2kPwjojJ6g2qg_GrU-A5mb"
+      }
+    },
+    "filemaker-api": {
+      "command": "node",
+      "args": ["/Users/dasilvaja/Cloud Dropbox/Joe DaSilva/_VibeCoding/StudioHub-Dashboard/mcp-server/index.js"],
+      "env": {
+        "FM_SERVER": "saurfmpro03.imp.corp.transcontinental.ca",
+        "FM_API_VERSION": "v1",
+        "FM_PROTOCOL": "https",
+        "FM_DATABASE_TCAI": "TC-AI",
+        "FM_ACCOUNT_TCAI": "api",
+        "FM_PASSWORD_TCAI": "API!23",
+        "FM_DATABASE_STUDIOHUB": "StudioHub",
+        "FM_ACCOUNT_STUDIOHUB": "api",
+        "FM_PASSWORD_STUDIOHUB": "API!23"
+      }
+    }
+  }
+}

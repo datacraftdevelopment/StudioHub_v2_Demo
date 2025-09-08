@@ -1,0 +1,22 @@
+# Development Dockerfile
+FROM node:20-alpine
+
+# Install dependencies for better development experience
+RUN apk add --no-cache libc6-compat git
+
+WORKDIR /app
+
+# Copy package files
+COPY package.json package-lock.json* ./
+
+# Install dependencies
+RUN npm install
+
+# Copy application files
+COPY . .
+
+# Expose the port
+EXPOSE 3000
+
+# Start the development server
+CMD ["npm", "run", "dev"]

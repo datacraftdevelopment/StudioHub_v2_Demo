@@ -1,0 +1,46 @@
+services:
+  # Next.js Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: studiohub-app
+    ports:
+      - "3095:3000"
+    volumes:
+      - ./app:/app/app
+      - ./components:/app/components
+      - ./lib:/app/lib
+      - ./public:/app/public
+      - ./styles:/app/styles
+      - ./.env.local:/app/.env.local
+      - ./next.config.js:/app/next.config.js
+      - ./tailwind.config.ts:/app/tailwind.config.ts
+      - ./tsconfig.json:/app/tsconfig.json
+    environment:
+      - NODE_ENV=development
+      - WATCHPACK_POLLING=true
+    networks:
+      - studiohub-network
+    depends_on:
+      - mcp-server
+
+  # MCP Server for FileMaker
+  mcp-server:
+    build:
+      context: ./mcp-server
+      dockerfile: Dockerfile
+    container_name: studiohub-mcp
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./mcp-server:/app
+      - ./mcp-server/.env:/app/.env
+    environment:
+      - NODE_ENV=development
+    networks:
+      - studiohub-network
+
+networks:
+  studiohub-network:
+    driver: bridge

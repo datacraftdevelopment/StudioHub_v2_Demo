@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "filemaker-api": {
+      "command": "node",
+      "args": ["/Users/dasilvaja/Cloud Dropbox/Joe DaSilva/_VibeCoding/StudioHub-Dashboard/mcp-server/index.js"],
+      "env": {
+        "FM_SERVER": "saurfmpro03.imp.corp.transcontinental.ca",
+        "FM_API_VERSION": "v1",
+        "FM_PROTOCOL": "https",
+        "FM_DATABASE_TCAI": "TC-AI",
+        "FM_ACCOUNT_TCAI": "api",
+        "FM_PASSWORD_TCAI": "API!23",
+        "FM_DATABASE_STUDIOHUB": "StudioHub",
+        "FM_ACCOUNT_STUDIOHUB": "",
+        "FM_PASSWORD_STUDIOHUB": ""
+      }
+    }
+  }
+}

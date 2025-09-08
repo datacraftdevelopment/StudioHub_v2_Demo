@@ -1,0 +1,40 @@
+# Dependencies
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Next.js
+.next
+out
+build
+
+# Environment files
+.env
+.env.production
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+*.pem
+
+# Testing
+coverage
+.nyc_output
+
+# Misc
+.git
+.gitignore
+README.md
+docs
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Claudia directory (separate project)
+claudia/

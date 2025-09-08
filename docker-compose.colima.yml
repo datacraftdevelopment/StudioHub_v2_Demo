@@ -1,0 +1,29 @@
+services:
+  # Next.js Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.colima
+    container_name: studiohub-app
+    ports:
+      - "3001:3000"  # Changed to avoid conflict with Baserow on port 3000
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_APP_URL=http://localhost:3001
+      - STUDIOHUB_HOST=saurfmpro03.imp.corp.transcontinental.ca
+      - STUDIOHUB_DATABASE=StudioHub
+      - STUDIOHUB_USERNAME=api
+      - STUDIOHUB_PASSWORD=API!23
+      - STUDIOHUB_SSL_VERIFY=false
+      - SESSION_SECRET=studiohub-intranet-secret-2024
+      - SESSION_TIMEOUT=3600000
+      - API_RATE_LIMIT=100
+      - API_CACHE_TTL=300000
+      - NEXT_TELEMETRY_DISABLED=1
+    restart: unless-stopped
+    networks:
+      - studiohub-network
+
+networks:
+  studiohub-network:
+    driver: bridge

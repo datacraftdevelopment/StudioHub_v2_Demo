@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  # StudioHub Dashboard Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.easy
+    container_name: studiohub-app
+    ports:
+      - "${HOST_PORT:-3000}:3000"
+    environment:
+      - NEXT_PUBLIC_APP_URL=http://localhost:${HOST_PORT:-3000}
+    restart: unless-stopped
+
+# Simple bridge network
+networks:
+  default:
+    driver: bridge
