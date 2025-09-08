@@ -124,7 +124,7 @@ export class MockFileMakerClient {
 
     // Parse query array
     if (Array.isArray(query)) {
-      const matchingUsers = []
+      const matchingUsers: typeof mockUsers = []
       
       query.forEach(queryObj => {
         const matches = mockUsers.filter(user => {
